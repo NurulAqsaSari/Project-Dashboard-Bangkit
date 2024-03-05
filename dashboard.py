@@ -24,7 +24,7 @@ with tab1:
 
     # Plotting using seaborn
     fig, ax = plt.subplots()
-    sns.barplot(season_names, seasonal_data, palette=colors, ax=ax)
+    sns.barplot(x=season_names, y=seasonal_data, palette=colors, ax=ax)
     ax.set(xlabel='Musim', ylabel='Rata-rata Jumlah Sewa Sepeda Harian')
     ax.set_title('Pengaruh Musim terhadap Jumlah Sewa Sepeda Harian')
 
