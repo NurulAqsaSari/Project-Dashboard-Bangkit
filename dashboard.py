@@ -4,7 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Load the data
-day = pd.read_csv('data/day.csv')
+day = pd.read_csv('main_data.csv')
 
 # Streamlit app
 st.set_page_config(page_title="Bikecycle Rental")
