@@ -1,4 +1,4 @@
-import streamlit as st
+dimport streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -59,7 +59,7 @@ with tab2:
         plt.title("Pola Jumlah Sewa Sepeda Harian Berdasarkan Bulan")
         plt.xlabel("Bulan")
         plt.ylabel("Jumlah Sewa Sepeda Harian")
-        st.pyplot()
+        st.pyplot(fig)
         # Explanation
         st.write("""
         berdasarkan line chart di atas dapat disimpulkan bahwa dilihat 
@@ -77,7 +77,7 @@ with tab2:
         plt.ylabel("Jumlah Sewa Sepeda Harian")
     
         # Display the selected plot using Streamlit
-        st.pyplot()
+        st.pyplot(fig)
 
         # Explanation
         st.write("""
