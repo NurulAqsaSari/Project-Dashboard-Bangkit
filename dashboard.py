@@ -4,7 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Load the data
-day = pd.read_csv('D:/Project-Dashboard-Bangkit/day.csv')
+day = pd.read_csv('main_data.csv')
 
 # Streamlit app
 st.set_page_config(page_title="Bikecycle Rental")
@@ -30,17 +30,17 @@ with tab1:
 
     # Display the plot using Streamlit
     st.pyplot(fig)
-# Explanation
+    # Explanation
     st.write("""
     Berdasarkan grafik diatas dapat dilihat bahwa rata-rata sewa sepeda lebih banyak pada musim gugur(Fall)
     yaitu sekitar 5600-an sepeda 
-    """)
+    """)
     
     st.write("""
     Musim gugur sering kali ditandai dengan suhu yang nyaman, kelembaban yang moderat, 
     dan kurangnya kondisi ekstrem seperti panasnya musim panas atau dinginnya musim dingin. 
     Cuaca yang baik dan nyaman cenderung mendorong orang untuk beraktivitas di luar ruangan, termasuk bersepeda.
-    """)
+    """)
 
 # Second Tab: Monthly Patterns and Weather Impact
 with tab2:
@@ -65,13 +65,13 @@ with tab2:
         berdasarkan line chart di atas dapat disimpulkan bahwa dilihat 
         dari pola bulan jumlah sewa sepeda meningkat pada bulan 6 dan 9. 
         Pada bulan 6 dan 9 penyewaan sepeda ada sekitar lebih dari 5500an unit sepeda.
-        """)
+        """)
 
     elif selected_attribute == "Weather Impact":
         # Visualisation and explanatory data
         # Influence of weather situation (weathersit) on the number of daily bike rentals
-        plt.figure(figsize=(10, 6))
-        sns.boxplot(x="weathersit", y="cnt", data=day)
+        fig, ax = plt.subplots(figsize=(10, 6))
+        sns.boxplot(x="weathersit", y="cnt", data=day, ax=ax)
         plt.title("Pengaruh Weathersit Terhadap Jumlah Sewa Sepeda Harian")
         plt.xlabel("Weathersit")
         plt.ylabel("Jumlah Sewa Sepeda Harian")
@@ -83,9 +83,9 @@ with tab2:
         st.write("""
         Berdasarkan boxplot di atas dapat disimpulkan bahwa jumlah sewa sepeda mengingkat 
         ketika cuaca Cerah, Sedikit awan, Berawan sebagian, Berawan sebagian. 
-        """)
+        """)
     
         st.write("""
         Cuaca yang cerah atau berawan sebagian dapat memberikan kondisi lalu lintas yang lebih baik dan visibilitas yang lebih tinggi,
         yang dapat meningkatkan rasa aman bagi para penyewa sepeda. Selain itu, suhu yang nyaman pada kondisi cuaca tersebut membuat bersepeda lebih menyenangkan.
-        """)
+        """)
