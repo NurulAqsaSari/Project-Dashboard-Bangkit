@@ -89,3 +89,4 @@ with tab2:
         Cuaca yang cerah atau berawan sebagian dapat memberikan kondisi lalu lintas yang lebih baik dan visibilitas yang lebih tinggi,
         yang dapat meningkatkan rasa aman bagi para penyewa sepeda. Selain itu, suhu yang nyaman pada kondisi cuaca tersebut membuat bersepeda lebih menyenangkan.
         """)
+
